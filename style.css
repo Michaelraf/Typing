@@ -1,0 +1,9 @@
+.untyped{
+    color: blue;
+}
+.typed{
+    background-color: rgb(142, 182, 142);
+}
+.typed.error{
+    background-color: rgb(182, 142, 142);
+}
