@@ -1,9 +1,78 @@
-.untyped{
-    color: blue;
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  min-height: 703px;
+  padding: 0;
+  margin: 0;
 }
-.typed{
-    background-color: rgb(142, 182, 142);
+
+#container {
+  width: 703px;
+  height: 503px;
+  font-size: x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(19, 19, 19);
+  white-space: break-spaces;
 }
-.typed.error{
-    background-color: rgb(182, 142, 142);
+
+.typed,
+.untyped {
+  word-break: keep-all;
+}
+
+.typed {
+  /* background-color: rgb(142, 182, 142); */
+  color: rgb(66, 63, 221);
+}
+
+.typed.error {
+  /* background-color: rgb(182, 142, 142); */
+  color: rgb(219, 54, 54);
+
+}
+
+.turn {
+  border-bottom: 3px solid black;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.turn.error {
+  border-bottom: 3px solid rgb(219, 54, 54);
+  animation-name: blink-error;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {
+    border-bottom: 3px solid black;
+  }
+
+  50% {
+    border-bottom: none;
+  }
+
+  100% {
+    border-bottom: 3px solid black;
+  }
+}
+
+@keyframes blink-error {
+  0% {
+    border-bottom: 3px solid rgb(219, 54, 54);
+  }
+
+  50% {
+    border-bottom: none;
+  }
+
+  100% {
+    border-bottom: 3px solid rgb(219, 54, 54);
+  }
 }
