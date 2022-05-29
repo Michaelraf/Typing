@@ -1,3 +1,8 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 body {
   display: flex;
   flex-direction: row;
@@ -5,45 +10,59 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  min-height: 703px;
-  padding: 0;
-  margin: 0;
+  min-height: 702px;
 }
-
-#container {
-  width: 703px;
-  height: 503px;
+#container{
+  height: 502px;
+  overflow: hidden;
+  background-color: whitesmoke;
+  padding:0 10px;
+  border-top: whitesmoke solid 10px;
+  border-bottom: whitesmoke solid 10px;
+  border-radius: 10px;
+}
+#container-1 {
   font-size: x-large;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(19, 19, 19);
-  white-space: break-spaces;
+  color: rgb(48, 48, 48);
+  line-height: 1.1em;
+  white-space: pre-line;
+  width: 702px;
+  height: fit-content;
 }
-
+.word{
+  display: inline-block;
+  margin-top: 0.3em;
+}
 .typed,
 .untyped {
-  word-break: keep-all;
+  display: inline-block;
+  width: 0.8em;
+  height: 1.2em;
+  margin-right: 0.09em;
+  text-align: center;
+  vertical-align: bottom;
+  border-bottom: 2px solid transparent;
 }
 
 .typed {
-  /* background-color: rgb(142, 182, 142); */
-  color: rgb(66, 63, 221);
+  background-color: rgb(181, 251, 181);
+  border-radius: 5px;
 }
 
 .typed.error {
-  /* background-color: rgb(182, 142, 142); */
-  color: rgb(219, 54, 54);
-
+  background-color: rgb(251, 181, 181);
 }
 
 .turn {
-  border-bottom: 3px solid black;
+  border-bottom: 2px solid rgb(48, 48, 48);
   animation-name: blink;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 
 .turn.error {
-  border-bottom: 3px solid rgb(219, 54, 54);
+  border-bottom: 2px solid rgb(219, 54, 54);
   animation-name: blink-error;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -51,28 +70,28 @@ body {
 
 @keyframes blink {
   0% {
-    border-bottom: 3px solid black;
+    border-bottom: 2px solid rgb(48, 48, 48);
   }
 
   50% {
-    border-bottom: none;
+    border-bottom: 2px solid transparent;
   }
 
   100% {
-    border-bottom: 3px solid black;
+    border-bottom: 2px solid rgb(48, 48, 48);
   }
 }
 
 @keyframes blink-error {
   0% {
-    border-bottom: 3px solid rgb(219, 54, 54);
+    border-bottom: 2px solid rgb(219, 54, 54);
   }
 
   50% {
-    border-bottom: none;
+    border-bottom: 2px solid transparent;
   }
 
   100% {
-    border-bottom: 3px solid rgb(219, 54, 54);
+    border-bottom: 2px solid rgb(219, 54, 54);
   }
 }
