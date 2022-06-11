@@ -3,17 +3,33 @@
   padding: 0;
   margin: 0;
 }
-body {
+body{
+  height: 100vh;
+  min-height: 702px;
+  overflow: scroll;
+}
+header{
+  width: 100%;
+  height: 100px;
+  background-color: #8181f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+timer{
+  color: black;
+}
+#text {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
-  min-height: 702px;
+  height: calc(100vh - 100px);
+  min-height: 688px;
+  background-color: #e3dddd;
 }
 #container{
-  height: 502px;
   overflow: hidden;
   background-color: whitesmoke;
   padding:0 10px;
@@ -32,7 +48,7 @@ body {
 }
 .word{
   display: inline-block;
-  margin-top: 0.3em;
+  margin-top: 7px;
 }
 .typed,
 .untyped {
@@ -66,6 +82,33 @@ body {
   animation-name: blink-error;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+}
+#resultContainer{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: x-large;
+  color: rgb(46, 46, 46);
+  background-color: #fff;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  transition: opacity 0.5s;
+}
+#resultContainer .item{
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.item .p{
+  display: block;
 }
 
 @keyframes blink {
