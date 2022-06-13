@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
-    <title>Typing</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Just typing</title>
 </head>
 
 <body>
@@ -20,9 +20,9 @@
     </div>
     <div id="resultContainer">
         <div>
-            <div class="item">
-                <p>WPM</p>
-                <p id="wpm"></p>
+            <div class="item-wpm">
+                    <p id="wpm"></p>
+                    <p> WPM</p>
             </div>
             <div class="item">
                 <p>Time</p>
@@ -33,12 +33,16 @@
                 <p id="accuracy"></p>
             </div>
             <div class="item">
-                <button id="retry">Retry</button>
+                <button id="retry">Take another</button>
             </div>
         </div>
     </div>
-    <script type="module" src="../scripts/timer.js"></script>
-    <script type="module" src="../scripts/app.js"></script>
+    <script src="../scripts/global.js"></script>
+    <script type="module" src="scripts/textRender.js"></script>
+    <script type="module" src="scripts/timer.js"></script>
+    <script type="module" src="scripts/event.js"></script>
+    <script type="module" src="scripts/run.js"></script>
+    <script type="module" src="scripts/app.js"></script>
 </body>
 
 </html>
